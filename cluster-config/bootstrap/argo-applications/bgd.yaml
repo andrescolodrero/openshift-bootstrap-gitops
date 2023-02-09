@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name:  bgd
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: openshift-gitops
+    server: https://kubernetes.default.svc
+  project: application-services
+  source:
+    path: apps/bgd/overlays
+    repoURL: https://dev.azure.com/arionbanki/AzIT.FoundationSupport/_git/IsIT.OpenShift.Demo
+    targetRevision: app
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true

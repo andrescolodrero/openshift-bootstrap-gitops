@@ -1,0 +1,13 @@
+# Repository credentials, for using the same credentials in multiple repositories.
+apiVersion: v1
+kind: Secret
+metadata:
+  name: argoproj-openshift-cluster-creds
+  namespace: openshift-gitops
+  labels:
+    argocd.argoproj.io/secret-type: repo-creds
+stringData:
+  url: https://dev.azure.com/{ your organization }/ { your project }/_git/{ your repo }
+  type: git
+  password: APPLY KUBESEAL WHEN TOKEN
+  username: empty-pat-user
