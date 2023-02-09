@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: config-container-security
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: openshift-gitops
+    server: https://kubernetes.default.svc
+  project: cluster-config
+  source:
+    path: platform-services/container-security-operator
+    repoURL: https://dev.azure.com/{ your organization }/ { your project }/_git/{ your application repo }
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true

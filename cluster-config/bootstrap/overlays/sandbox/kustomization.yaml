@@ -5,5 +5,5 @@ resources:
 - ../../base
 - ../../../components/sealed-secrets 
 - ../../../components/argocd-config
-- ../../argo-projects
-- ../../argo-applications
+- ../../../components/argo-projects
+- ../../../components/argo-applications
