@@ -10,8 +10,8 @@ spec:
   project: cluster-config
   source:
     path: platform-services/container-security-operator
-    repoURL: https://dev.azure.com/arionbanki/AzIT.FoundationSupport/_git/IsIT.OpenShift.Cluster
-    targetRevision: bootstrap
+    repoURL: https://dev.azure.com/{ your organization }/ { your project }/_git/{ your application repo }
+    targetRevision: main
   syncPolicy:
     automated:
       prune: false

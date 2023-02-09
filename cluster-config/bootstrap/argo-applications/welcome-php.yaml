@@ -10,8 +10,8 @@ spec:
   project: application-services
   source:
     path: apps/welcome-php/overlays/syncwaves
-    repoURL: https://dev.azure.com/arionbanki/AzIT.FoundationSupport/_git/IsIT.OpenShift.Demo
-    targetRevision: app
+    repoURL: https://dev.azure.com/{ your organization }/ { your project }/_git/{ your application repo }
+    targetRevision: main
   syncPolicy:
     automated:
       prune: false

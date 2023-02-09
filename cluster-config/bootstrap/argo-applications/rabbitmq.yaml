@@ -10,8 +10,8 @@ spec:
   project: cluster-config
   source:
     path: platform-services/rabbitmq
-    repoURL: https://dev.azure.com/arionbanki/AzIT.FoundationSupport/_git/IsIT.OpenShift.Cluster
-    targetRevision: bootstrap
+    repoURL: hhttps://dev.azure.com/{ your organization }/ { your project }/_git/{ your application repo }
+    targetRevision: main
   syncPolicy:
     automated:
       prune: false
