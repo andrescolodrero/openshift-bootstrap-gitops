@@ -8,14 +8,24 @@ Starts as 1 repo:1 cluster, but can be modified for multiple clusters.
 Folder structure
 
 ## Folder structure:
-- bootstrap: This stores bootstrapping configurations. These are items that get the cluster configured with the GitOps controller
-    - base: Common YAML installation config
-    - overlays: Configurations based on Environments
 
+- cluster-config 
+        bootstrap
+        - argo-applications
+        - argo-projects
+        - base
+        - overlays
+        components
+        - argocd-config
+        - sealed-secrets
+        - argocd-projects
+        - argocd-applications
+platform-services
+- in case we need to add some services as service mesh, operators, etc
+data-services
+- in case we need to add data services like redis, sql, etc in bootstrap
 
-- components: Main folder to Configures OPenshift: Other operators,Argo-CD projects and sealed secrets.
-
-- services: Services such as Redis, MQ, etc. deployed with ArgoCD
+NOTE: Applications are refernced to other project (now on AzureDevops.. to change to github)
 
 ## Sealed Secrets
 This repo uses sealed secrets.
